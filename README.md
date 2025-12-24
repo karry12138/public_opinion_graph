@@ -47,6 +47,11 @@ cd public_opinion_graph
 ### 2. 创建虚拟环境（推荐）
 
 ```bash
+# 快速环境配置与环境测试脚本（Windows推荐）
+quick_start.bat
+```
+
+```bash
 python -m venv venv
 
 # Windows
