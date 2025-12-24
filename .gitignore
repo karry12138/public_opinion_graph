@@ -1,0 +1,80 @@
+# Python 字节码和缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv
+.env
+
+# PyCharm IDE
+.idea/
+*.iml
+*.iws
+
+# VSCode IDE
+.vscode/
+*.code-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# 测试和覆盖率
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# 打包和分发
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+
+# 日志文件
+*.log
+logs/
+
+# 数据库
+*.db
+*.sqlite
+*.sqlite3
+
+# 配置文件（如果包含敏感信息）
+.env.local
+.env.*.local
+config.local.py
+
+# 操作系统相关
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 临时文件
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytype
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# 项目特定文件
+过程md/
+
