@@ -197,7 +197,8 @@ class GraphVisualizer:
             report.append("\n【主要诉求】")
             for i, demand in enumerate(demands, 1):
                 report.append(f"  {i}. {demand['demand']}")
-                report.append(f"     频率: {demand['frequency']}, 提及用户数: {demand['user_count']}")
+                # report.append(f"     频率: {demand['frequency']}, 提及用户数: {demand['user_count']}")
+                report.append(f"     提及用户数: {demand['user_count']}")
         
         # 解决方案
         solutions = self.get_solutions()
@@ -224,7 +225,7 @@ class GraphVisualizer:
         
         return "\n".join(report)
     
-    def export_graph_data(self, output_file: str = "graph_data.json"):
+    def export_graph_data(self, output_file: str = "output/graph_data.json"):
         """导出图谱数据为JSON"""
         data = {
             'event_summary': self.get_event_summary(),
@@ -244,6 +245,7 @@ class GraphVisualizer:
     def print_cypher_queries(self):
         """打印常用的Cypher查询语句"""
         queries = [
+            ("查看所有节点与关系(限制关系上限400条)","MATCH (n)-[r]->(m) RETURN n, r, m LIMIT 400"),
             ("查看所有节点类型", "MATCH (n) RETURN DISTINCT labels(n) as node_type, count(*) as count"),
             ("查看事件及其关系", "MATCH (e:Event)-[r]->(n) RETURN e, r, n LIMIT 50"),
             ("查看负面评论", "MATCH (c:Comment) WHERE c.sentiment = '负面' RETURN c LIMIT 20"),

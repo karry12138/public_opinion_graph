@@ -159,7 +159,7 @@ class OpinionAnalysisPipeline:
     def _save_results(self):
         """保存分析结果"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        output_file = f"analysis_result_{timestamp}.json"
+        output_file = f"output/analysis_result_{timestamp}.json"
         
         # 移除不可序列化的对象
         save_data = {
