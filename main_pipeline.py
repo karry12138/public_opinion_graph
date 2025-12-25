@@ -188,7 +188,8 @@ class OpinionAnalysisPipeline:
         
         print(f"\n【主要诉求】")
         for i, demand in enumerate(self.analysis_result['demands'].get('main_demands', [])[:5], 1):
-            print(f"  {i}. {demand.get('demand', '')} (频率:{demand.get('frequency', '未知')})")
+            # print(f"  {i}. {demand.get('demand', '')} (频率:{demand.get('frequency', '未知')})")
+            print(f"  {i}. {demand.get('demand', '')} ")
         
         print(f"\n【建议方案】")
         for i, solution in enumerate(self.analysis_result['solutions'].get('suggested_solutions', [])[:5], 1):

@@ -68,7 +68,8 @@ class LLMAnalyzer:
         """批量分析评论情感"""
         results = []
         
-        for comment in comments[:20]:  # 限制处理数量以节省API调用
+        # for comment in comments[:20]:  # 限制处理数量以节省API调用
+        for comment in comments:  # 去除限制处理数量
             main_comment = comment.get('main_comment', {})
             content = main_comment.get('content', '')
             author = main_comment.get('author', '')
